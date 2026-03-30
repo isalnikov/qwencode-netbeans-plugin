@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE filesystem PUBLIC "-//NetBeans//DTD Filesystem 1.2//EN" "http://www.netbeans.org/dtds/filesystem-1_2.dtd">
+<filesystem>
+    <folder name="Actions">
+        <folder name="QwenCode">
+            <file name="com-qwencode-netbeans-ui-actions-QwenCodeAction.instance">
+                <attr name="delegate" newvalue="com.qwencode.netbeans.ui.actions.QwenCodeAction"/>
+                <attr name="displayName" bundlevalue="com.qwencode.netbeans.Bundle#CTL_QwenCodeAction"/>
+            </file>
+        </folder>
+    </folder>
+    <folder name="Menu">
+        <folder name="Tools">
+            <file name="com-qwencode-netbeans-ui-actions-QwenCodeAction.shadow">
+                <attr name="originalFile" stringvalue="Actions/QwenCode/com-qwencode-netbeans-ui-actions-QwenCodeAction.instance"/>
+            </file>
+        </folder>
+    </folder>
+    <folder name="Windows2">
+        <folder name="Components">
+            <file name="OutputTopComponent.settings">
+                <attr name="instanceCreate" newvalue="com.qwencode.netbeans.ui.output.OutputTopComponent"/>
+            </file>
+        </folder>
+    </folder>
+</filesystem>
