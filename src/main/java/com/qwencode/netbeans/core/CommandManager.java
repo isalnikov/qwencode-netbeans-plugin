@@ -121,14 +121,25 @@ public class CommandManager {
                     case "name": name = r.getElementText(); break;
                     case "cliCommand": cli = r.getElementText(); break;
                     case "description": desc = r.getElementText(); break;
-                    case "context": ctx = r.getElementText(); break;
+                    case "context": 
+                        ctx = r.getElementText(); 
+                        try {
+                            CommandContext.valueOf(ctx);
+                        } catch (IllegalArgumentException e) {
+                            ctx = "PROJECT_ROOT";
+                        }
+                        break;
                     case "shortcut": shortcut = r.getElementText(); break;
                 }
             }
         }
-        if (id != null && name != null && cli != null)
-            return new Command(id, name, cli, desc, CommandContext.valueOf(ctx),
-                shortcut != null ? KeyStroke.getKeyStroke(shortcut) : null);
+        if (id != null && name != null && cli != null) {
+            KeyStroke ks = null;
+            if (shortcut != null) {
+                try { ks = KeyStroke.getKeyStroke(shortcut); } catch (Exception e) {}
+            }
+            return new Command(id, name, cli, desc, CommandContext.valueOf(ctx), ks);
+        }
         return null;
     }
 

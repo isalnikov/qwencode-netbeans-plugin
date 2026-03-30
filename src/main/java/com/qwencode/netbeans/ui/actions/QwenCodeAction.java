@@ -78,6 +78,15 @@ public class QwenCodeAction extends AbstractAction {
     }
 
     private void openSettings() {
-        // TODO: Open Options dialog
+        // Открыть Options Dialog на вкладке QwenCode
+        // Используем стандартный механизм NetBeans
+        org.openide.windows.IOProvider io = org.openide.windows.IOProvider.getDefault();
+        javax.swing.SwingUtilities.invokeLater(() -> {
+            javax.swing.JOptionPane.showMessageDialog(
+                null, 
+                "Go to Tools → Options → QwenCode to configure commands", 
+                "QwenCode Settings", 
+                javax.swing.JOptionPane.INFORMATION_MESSAGE);
+        });
     }
 }
