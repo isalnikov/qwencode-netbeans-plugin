@@ -11,7 +11,6 @@ public class Icons {
         if (url != null) {
             return new ImageIcon(url);
         }
-        // Fallback: создать программно
         return createFallbackIcon();
     }
 
