@@ -22,5 +22,14 @@
                 <attr name="instanceCreate" newvalue="com.qwencode.netbeans.ui.output.OutputTopComponent"/>
             </file>
         </folder>
+        <folder name="modes">
+            <folder name="output">
+                <file name="OutputTopComponent.wstcref">
+                    <attr name="component" newvalue="com.qwencode.netbeans.ui.output.OutputTopComponent"/>
+                    <attr name="mode" stringvalue="output"/>
+                    <attr name="state" stringvalue="opened"/>
+                </file>
+            </folder>
+        </folder>
     </folder>
 </filesystem>
